@@ -1,0 +1,29 @@
+/*! \mainpage  Documentación Práctica
+ *
+\author  María del Mar García Cabello, Laura Tirado López
+
+\tableofcontents
+
+
+
+\section intro_sec Introducción
+
+ En esta practica implementaremos un tipo de dato abstracto vector disperso y un tipo de dato polinomio que tendrá como representación interna un tipo vector disperso. 
+
+\section vectorD Vector disperso
+
+Un vector disperso es un vector en el que la mayoría de los elementos tienen el mismo valor (conocido como valor por defecto). La presencia de este tipo de valores acarrea inconvenientes tanto desde el punto de vista de almacenamiento (un mismo elemento se repite un número considerable de veces) como desde el punto de vista de la eficiencia (pues distintos algoritmos pueden aprovechar este hecho).
+Resumiento, un vector se dice que es disperso cuando en él sólo se almacenan los elementos que son distintos del valor nulo.
+
+\subsection Representación Representación
+La representación del tipo de dato abstracto vector disperso tendrá una lista de pares <int, TIPO> que alojará los valores no nulos, el número de elementos totales del vector y el valor nulo del vector.
+Como invariante de la representación en la lista no puede haber ningún elemento con el valor nulo, los índices de los pares alojados en la lista deben ser válidos y los elementos de la lista deben estar ordenados.
+
+\section polinomio Polinomio
+
+A partir del dato vector disperso, implementamos un polinomio. Un polinomio es una expresión matemática constituida por un conjunto finito de constantes, variables y exponentes combinados usando sumas, restas y multiplicaciones.
+
+\subsection Representación Representación
+La representación del tipo de dato abstracto polinomio tendrá un vector disperso para guardar los monomios y un entero para representar el grado del polinomio. 
+Como invariante de la representación, tiene que cumplir el invariante del vector.
+*/
