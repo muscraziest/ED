@@ -1,0 +1,297 @@
+\hypertarget{classdiccionario}{\section{\-Referencia de la \-Clase diccionario}
+\label{classdiccionario}\index{diccionario@{diccionario}}
+}
+
+
+\-Clase diccionario.  
+
+
+
+
+{\ttfamily \#include $<$diccionario.\-h$>$}
+
+\subsection*{\-Tipos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classdiccionario_a6d02be0cdf21aeb28bdf44203a2c0e4e}{typedef pair$<$ nombre\-M, \hyperlink{classdefM}{def\-M} $>$ {\bfseries entrada}}\label{classdiccionario_a6d02be0cdf21aeb28bdf44203a2c0e4e}
+
+\item 
+\hypertarget{classdiccionario_aa5ebee53d922cfd46db90f11cac6da35}{typedef unsigned int {\bfseries size\-\_\-type}}\label{classdiccionario_aa5ebee53d922cfd46db90f11cac6da35}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdiccionario_a60c722b06ff7e050bae71601f74d7549}{diccionario} ()
+\begin{DoxyCompactList}\small\item\em constructor primitivo. \end{DoxyCompactList}\item 
+\hyperlink{classdiccionario_a19558e1ad869a8791741b1359c87d80b}{diccionario} (const \hyperlink{classdiccionario}{diccionario} \&d)
+\begin{DoxyCompactList}\small\item\em constructor de copia \end{DoxyCompactList}\item 
+\hypertarget{classdiccionario_a8df27c218ef713041e09c9f799a1e9e6}{bool \hyperlink{classdiccionario_a8df27c218ef713041e09c9f799a1e9e6}{empty} () const }\label{classdiccionario_a8df27c218ef713041e09c9f799a1e9e6}
+
+\begin{DoxyCompactList}\small\item\em vacia \-Chequea si el diccionario esta vacio (\hyperlink{classdiccionario_a441fdeeb87c717757f5f7ff50612d57e}{size()}==0) \end{DoxyCompactList}\item 
+pair$<$ entrada, bool $>$ \hyperlink{classdiccionario_a5ce69ac88959ca76c60fe0875690320f}{find} (const nombre\-M \&s) const 
+\begin{DoxyCompactList}\small\item\em busca una meteorito en el diccionario \end{DoxyCompactList}\item 
+bool \hyperlink{classdiccionario_abda03cfdf5848a07b2d93ebdc1238d27}{insert} (const entrada \&e)
+\begin{DoxyCompactList}\small\item\em \-Inserta una entrada en el diccionario. \end{DoxyCompactList}\item 
+\hyperlink{classdiccionario}{diccionario} \& \hyperlink{classdiccionario_af34ed220d3e0faa56cbe713b97766f02}{operator=} (const \hyperlink{classdiccionario}{diccionario} \&org)
+\begin{DoxyCompactList}\small\item\em operador de asignación \end{DoxyCompactList}\item 
+\hyperlink{classdefM}{def\-M} \& \hyperlink{classdiccionario_a8b2ac04f691e925d86967bbd62670a4d}{operator\mbox{[}$\,$\mbox{]}} (const nombre\-M \&s)
+\begin{DoxyCompactList}\small\item\em \-Consulta/\-Inserta una entrada en el diccionario. \end{DoxyCompactList}\item 
+const \hyperlink{classdefM}{def\-M} \& \hyperlink{classdiccionario_a1dbf7b521d4ac17e0bcd5d3e5ecff93d}{operator\mbox{[}$\,$\mbox{]}} (const nombre\-M \&s) const 
+\begin{DoxyCompactList}\small\item\em \-Consulta una entrada en el diccionario. \end{DoxyCompactList}\item 
+size\-\_\-type \hyperlink{classdiccionario_a441fdeeb87c717757f5f7ff50612d57e}{size} () const 
+\begin{DoxyCompactList}\small\item\em numero de entradas en el diccionario \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classdiccionario_a8cb968e174fba328963aeaa5134f623f}{buscar\-\_\-rep} (const nombre\-M \&s) const 
+\begin{DoxyCompactList}\small\item\em \-Comprueba si un elemento está repetido. \end{DoxyCompactList}\item 
+bool \hyperlink{classdiccionario_a0af2e538b04d23e6b42e63060c1cf002}{cheq\-\_\-rep} () const 
+\begin{DoxyCompactList}\small\item\em \-Chequea el \-Invariante de la representacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classdiccionario_ac076e11d1d19be05e28d8a83b2ade886}{vector$<$ entrada $>$ {\bfseries dic}}\label{classdiccionario_ac076e11d1d19be05e28d8a83b2ade886}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Amigas}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classdiccionario_a516e0071b7e529b4d37892ffb12247ef}{operator$<$$<$} (ostream \&, const \hyperlink{classdiccionario}{diccionario} \&)
+\begin{DoxyCompactList}\small\item\em imprime todas las entradas del diccionario \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Descripción detallada}
+\-Clase diccionario. 
+
+diccionario\-:\-: diccionario, find, operator\mbox{[}\mbox{]}, size, \-Tipos diccionario\-::entrada, diccionario\-::size\-\_\-type \-Descripción
+
+\-Un diccionario es un contenedor que permite almacenar un conjunto de pares de elementos, el primero será la clave que deber ser única y el segundo la definición. \-En nuestro caso el diccionario va a tener un subconjunto restringido de métodos (inserción de elementos, consulta de un elemento por clave, además de la consulta del elemento con mayor valor en la definición). \-Este diccionario \char`\"{}simulará\char`\"{} un diccionario de la stl, con algunas claras diferencias pue, entre otros, no estará dotado de la capacidad de iterar (recorrer) a través de sus elementos.
+
+\-Asociado al diccionario, tendremos el tipo 
+\begin{DoxyCode}
+ diccionario::entrada 
+\end{DoxyCode}
+ que permite hacer referencia al par de elementos almacenados en cada una de las posiciones del diccionario. \-Así, el primer campo de una entrada, first, representa la clave y el segundo campo, second, representa la definición. \-En nuestra aplicación concreta, la clave será un string representando una palabra válida del diccionario y el segundo campo es un entero que hace referencia a la frecuencia de ocurrencia de la palabra en el lenguaje.
+
+\-El número de elementos en el diccionario puede variar dinámicamente; la gestión de la memoria es automática. 
+
+\subsection{\-Documentación del constructor y destructor}
+\hypertarget{classdiccionario_a60c722b06ff7e050bae71601f74d7549}{\index{diccionario@{diccionario}!diccionario@{diccionario}}
+\index{diccionario@{diccionario}!diccionario@{diccionario}}
+\subsubsection[{diccionario}]{\setlength{\rightskip}{0pt plus 5cm}{\bf diccionario\-::diccionario} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdiccionario_a60c722b06ff7e050bae71601f74d7549}
+
+
+constructor primitivo. 
+
+\begin{DoxyPostcond}{\-Postcondición}
+define un constructor primitivo con size=0
+\end{DoxyPostcond}
+\-Como usa un contenedor de la \-S\-T\-L, se llama por defecto al constructor de la clase vector \hypertarget{classdiccionario_a19558e1ad869a8791741b1359c87d80b}{\index{diccionario@{diccionario}!diccionario@{diccionario}}
+\index{diccionario@{diccionario}!diccionario@{diccionario}}
+\subsubsection[{diccionario}]{\setlength{\rightskip}{0pt plus 5cm}{\bf diccionario\-::diccionario} (
+\begin{DoxyParamCaption}
+\item[{const {\bf diccionario} \&}]{d}
+\end{DoxyParamCaption}
+)}}\label{classdiccionario_a19558e1ad869a8791741b1359c87d80b}
+
+
+constructor de copia 
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em d} & diccionario a copiar \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Documentación de las funciones miembro}
+\hypertarget{classdiccionario_a8cb968e174fba328963aeaa5134f623f}{\index{diccionario@{diccionario}!buscar\-\_\-rep@{buscar\-\_\-rep}}
+\index{buscar\-\_\-rep@{buscar\-\_\-rep}!diccionario@{diccionario}}
+\subsubsection[{buscar\-\_\-rep}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf diccionario\-::buscar\-\_\-rep} (
+\begin{DoxyParamCaption}
+\item[{const nombre\-M \&}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classdiccionario_a8cb968e174fba328963aeaa5134f623f}
+
+
+\-Comprueba si un elemento está repetido. 
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em s} & nombre del meteorito \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Devuelve}
+true si el elemento está repetido, falso en caso contrario 
+\end{DoxyReturn}
+\hypertarget{classdiccionario_a0af2e538b04d23e6b42e63060c1cf002}{\index{diccionario@{diccionario}!cheq\-\_\-rep@{cheq\-\_\-rep}}
+\index{cheq\-\_\-rep@{cheq\-\_\-rep}!diccionario@{diccionario}}
+\subsubsection[{cheq\-\_\-rep}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf diccionario\-::cheq\-\_\-rep} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classdiccionario_a0af2e538b04d23e6b42e63060c1cf002}
+
+
+\-Chequea el \-Invariante de la representacion. 
+
+\begin{DoxyReturn}{\-Devuelve}
+true si el invariante es correcto, falso en caso contrario 
+\end{DoxyReturn}
+\hypertarget{classdiccionario_a5ce69ac88959ca76c60fe0875690320f}{\index{diccionario@{diccionario}!find@{find}}
+\index{find@{find}!diccionario@{diccionario}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}pair$<$ diccionario\-::entrada, bool $>$ \& {\bf diccionario\-::find} (
+\begin{DoxyParamCaption}
+\item[{const nombre\-M \&}]{s}
+\end{DoxyParamCaption}
+) const}}\label{classdiccionario_a5ce69ac88959ca76c60fe0875690320f}
+
+
+busca una meteorito en el diccionario 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em s} & cadena a buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Devuelve}
+una copia de la entrada en el diccionario. \-Si no se encuentra devuelve la entrada con la definicion por defecto 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{\-Postcondición}
+no modifica el diccionario. \begin{DoxyVerb}Uso
+       
+
+	if (D.find("aaa").second ==true) cout << "Esta" ;
+	else cout << "No esta";
+	\end{DoxyVerb}
+ 
+\end{DoxyPostcond}
+\hypertarget{classdiccionario_abda03cfdf5848a07b2d93ebdc1238d27}{\index{diccionario@{diccionario}!insert@{insert}}
+\index{insert@{insert}!diccionario@{diccionario}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf diccionario\-::insert} (
+\begin{DoxyParamCaption}
+\item[{const entrada \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{classdiccionario_abda03cfdf5848a07b2d93ebdc1238d27}
+
+
+\-Inserta una entrada en el diccionario. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em e} & entrada a insertar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Devuelve}
+true si la entrada se ha podido insertar con éxito, esto es, no existe un meteorito con igual nombre en el diccionario. \-False en caso contrario 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{\-Postcondición}
+\-Si e no esta en el diccionario, el \hyperlink{classdiccionario_a441fdeeb87c717757f5f7ff50612d57e}{size()} sera incrementado en 1. /$\ast$! \-Corrección\-: \-En la versión 2, hemos mejorado la eficiencia de este método. 
+\end{DoxyPostcond}
+\hypertarget{classdiccionario_af34ed220d3e0faa56cbe713b97766f02}{\index{diccionario@{diccionario}!operator=@{operator=}}
+\index{operator=@{operator=}!diccionario@{diccionario}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf diccionario} \& diccionario\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf diccionario} \&}]{org}
+\end{DoxyParamCaption}
+)}}\label{classdiccionario_af34ed220d3e0faa56cbe713b97766f02}
+
+
+operador de asignación 
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em org} & diccionario a copiar. \-Crea un diccionario duplicado exacto de org. /$\ast$! \-Corrección\-: \-Cambiamos el código por uno más sencillo. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdiccionario_a8b2ac04f691e925d86967bbd62670a4d}{\index{diccionario@{diccionario}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!diccionario@{diccionario}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf def\-M} \& diccionario\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const nombre\-M \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{classdiccionario_a8b2ac04f691e925d86967bbd62670a4d}
+
+
+\-Consulta/\-Inserta una entrada en el diccionario. 
+
+\-Busca la cadena s en el diccionario, si la encuentra devuelve una referencia a la definición de la misma en caso contrario la inserta, con una definición por defecto, devolviendo una referencia a este valor.
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em s} & cadena a insertar \\
+\hline
+\mbox{\tt out}  & {\em \hyperlink{classdefM}{def\-M}} & \& referencia a la definicion asociada a la entrada, nos permite modificar la definición \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{\-Postcondición}
+\-Si s no esta en el diccionario, el \hyperlink{classdiccionario_a441fdeeb87c717757f5f7ff50612d57e}{size()} sera incrementado en 1. /$\ast$! \-Corrección\-:
+\end{DoxyPostcond}
+\-Tiene que devolver una referencia. \-Modificamos el código para que devuelva la referencia correctamente. \hypertarget{classdiccionario_a1dbf7b521d4ac17e0bcd5d3e5ecff93d}{\index{diccionario@{diccionario}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!diccionario@{diccionario}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf def\-M} \& diccionario\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const nombre\-M \&}]{s}
+\end{DoxyParamCaption}
+) const}}\label{classdiccionario_a1dbf7b521d4ac17e0bcd5d3e5ecff93d}
+
+
+\-Consulta una entrada en el diccionario. 
+
+\-Busca la cadena s en el diccionario, si la encuentra devuelve una referencia constante aa la definición de la misma, si no la encuentra da un mensaje de error.
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em s} & cadena a insertar \\
+\hline
+\mbox{\tt out}  & {\em int} & \& referencia constante a la definicion asociada a la entrada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{\-Postcondición}
+\-No se modifica el diccionario. /$\ast$! \-Corrección\-:
+\end{DoxyPostcond}
+\-Hemos añadido que en caso de que el elemento no esté en el diccionario muestre un mensaje de error. \hypertarget{classdiccionario_a441fdeeb87c717757f5f7ff50612d57e}{\index{diccionario@{diccionario}!size@{size}}
+\index{size@{size}!diccionario@{diccionario}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}diccionario\-::size\-\_\-type {\bf diccionario\-::size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classdiccionario_a441fdeeb87c717757f5f7ff50612d57e}
+
+
+numero de entradas en el diccionario 
+
+\begin{DoxyPostcond}{\-Postcondición}
+\-No se modifica el diccionario. 
+\end{DoxyPostcond}
+
+
+\subsection{\-Documentación de las funciones relacionadas y clases amigas}
+\hypertarget{classdiccionario_a516e0071b7e529b4d37892ffb12247ef}{\index{diccionario@{diccionario}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!diccionario@{diccionario}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{sal, }
+\item[{const {\bf diccionario} \&}]{\-D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classdiccionario_a516e0071b7e529b4d37892ffb12247ef}
+
+
+imprime todas las entradas del diccionario 
+
+\begin{DoxyPostcond}{\-Postcondición}
+\-No se modifica el diccionario. 
+\end{DoxyPostcond}
+\begin{DoxyRefDesc}{\-Tareas pendientes}
+\item[\hyperlink{todo__todo000001}{\-Tareas pendientes}]implementar esta funcion \end{DoxyRefDesc}
+
+
+\-La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+diccionario.\-h\item 
+diccionario.\-hxx\end{DoxyCompactItemize}

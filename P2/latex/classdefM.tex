@@ -1,0 +1,301 @@
+\hypertarget{classdefM}{\section{\-Referencia de la \-Clase def\-M}
+\label{classdefM}\index{def\-M@{def\-M}}
+}
+
+
+\-Clase \hyperlink{classdefM}{def\-M}, asociada a la definición de un meteorito.  
+
+
+
+
+{\ttfamily \#include $<$meteorito.\-h$>$}
+
+\subsection*{\-Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdefM_a16fbeb194c874eccb879f8683e5ad8b4}{def\-M} ()
+\begin{DoxyCompactList}\small\item\em \-Constructor primitivo. \end{DoxyCompactList}\item 
+\hyperlink{classdefM_a8256dc221b6f796e1bb6520063c801e6}{def\-M} (const \hyperlink{classdefM}{def\-M} \&x)
+\begin{DoxyCompactList}\small\item\em \-Constructor de copia. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classdefM_a2eba9a6e331f7dd966850378e657e717}{get\-Codes} ()
+\begin{DoxyCompactList}\small\item\em \-Consulta el codigo del meteorito. \end{DoxyCompactList}\item 
+bool \hyperlink{classdefM_ac4b0001e8a9dee99def85c2037563161}{get\-Fall} ()
+\begin{DoxyCompactList}\small\item\em \-Consulta si el meteorito ha caído. \end{DoxyCompactList}\item 
+double \hyperlink{classdefM_a46460f47d0d051fb47cc8a4cc3b1e51d}{get\-Lat} ()
+\begin{DoxyCompactList}\small\item\em \-Consulta la latitud (coordenada) del meteorito. \end{DoxyCompactList}\item 
+double \hyperlink{classdefM_a35962a1e2c8a28da950d4cdb7575689b}{get\-Long} ()
+\begin{DoxyCompactList}\small\item\em \-Consulta la longitud (coordenada) del meteorito. \end{DoxyCompactList}\item 
+double \hyperlink{classdefM_ad289db897bed43977727d3a9cca9a673}{get\-Mas} ()
+\begin{DoxyCompactList}\small\item\em \-Consulta el valor de la masa del meteorito. \end{DoxyCompactList}\item 
+string \hyperlink{classdefM_ae2758bc83256eafcf74a073dde0dbcf9}{get\-Year} ()
+\begin{DoxyCompactList}\small\item\em \-Consulta el año en que cayó el meteorito. \end{DoxyCompactList}\item 
+bool \hyperlink{classdefM_acfda55375efd2a0e41245d20eaa0ec12}{set\-Code} (const string \&s)
+\begin{DoxyCompactList}\small\item\em \-Inserta el código del meteorito. \end{DoxyCompactList}\item 
+void \hyperlink{classdefM_aac6d0ed22884bcf80232e0762b1e5a76}{set\-Fall} (bool f)
+\begin{DoxyCompactList}\small\item\em \-Inserta el valor de cuando cayó \end{DoxyCompactList}\item 
+void \hyperlink{classdefM_ae0816c9e145b0df96f81939b24e093c3}{set\-Lat} (double \&l)
+\begin{DoxyCompactList}\small\item\em \-Inserta la latitud (coordenada) en la que cayó (coordenada) \end{DoxyCompactList}\item 
+void \hyperlink{classdefM_a9db03ee4f9e4b53007a1727e9480a52c}{set\-Long} (double \&l)
+\item 
+void \hyperlink{classdefM_ae0aae6cbc83073b714403fd2532f29e7}{set\-Mas} (const double \&m)
+\begin{DoxyCompactList}\small\item\em \-Inserta el valor de la masa del meteorito en gramos. \end{DoxyCompactList}\item 
+void \hyperlink{classdefM_a1fb9d0be4b62c10d7296851d5393fe34}{set\-Year} (const string \&y)
+\begin{DoxyCompactList}\small\item\em \-Inserta el año en el que cayó el meteorito. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classdefM_a0bf823ad4efc48bb2d6fba5abec064e2}{vector$<$ string $>$ {\bfseries code}}\label{classdefM_a0bf823ad4efc48bb2d6fba5abec064e2}
+
+\item 
+\hypertarget{classdefM_a3274cfbca5d06b1b50320ea482bb73bf}{bool {\bfseries fall}}\label{classdefM_a3274cfbca5d06b1b50320ea482bb73bf}
+
+\item 
+\hypertarget{classdefM_a5a736aaef0379bbf0f4db730bd84a7d4}{double {\bfseries lat}}\label{classdefM_a5a736aaef0379bbf0f4db730bd84a7d4}
+
+\item 
+\hypertarget{classdefM_a3e0bf7a63f858a5742b8f489229c0ef7}{double {\bfseries lon}}\label{classdefM_a3e0bf7a63f858a5742b8f489229c0ef7}
+
+\item 
+\hypertarget{classdefM_af27ea7536cdcb94b4523b820b255cdac}{double {\bfseries mas}}\label{classdefM_af27ea7536cdcb94b4523b820b255cdac}
+
+\item 
+\hypertarget{classdefM_a3e251d235e7f03c5f911e5f699b039ec}{string {\bfseries year}}\label{classdefM_a3e251d235e7f03c5f911e5f699b039ec}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Amigas}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classdefM_a3784f8dcda03b04a658b79b87c603945}{ostream \& {\bfseries operator$<$$<$} (ostream \&, const \hyperlink{classdefM}{def\-M} \&)}\label{classdefM_a3784f8dcda03b04a658b79b87c603945}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Descripción detallada}
+\-Clase \hyperlink{classdefM}{def\-M}, asociada a la definición de un meteorito. 
+
+\hyperlink{classdefM_a16fbeb194c874eccb879f8683e5ad8b4}{def\-M\-::def\-M}, set\-Code, set\-Mas, set\-Fall, set\-Year, set\-Lat, set\-Long, get\-Codes, get\-Mas, get\-Fall, get\-Year, get\-Lat, get\-Long
+
+\-Un meteorito es un tipo de dato formado por un par de elementos. \-El primero es el nombre y el segundo las características de dicho meteorito definidas en la clase \hyperlink{classdefM}{def\-M}.
+
+\-La clase \hyperlink{classdefM}{def\-M} contiene los campos que definen las características de un meteorito\-: sus códigos específicos, su masa, si se conoce el lugar donde cayó o se sabe que ha caído, el año en que cayó y sus coordenadas de latitud y longitud. Ásí pues los métodos de la clase \hyperlink{classdefM}{def\-M} son modificadores (set) y consultores (get) de los valores de dichos atributos. 
+
+\subsection{\-Documentación del constructor y destructor}
+\hypertarget{classdefM_a16fbeb194c874eccb879f8683e5ad8b4}{\index{def\-M@{def\-M}!def\-M@{def\-M}}
+\index{def\-M@{def\-M}!defM@{def\-M}}
+\subsubsection[{def\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf def\-M\-::def\-M} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdefM_a16fbeb194c874eccb879f8683e5ad8b4}
+
+
+\-Constructor primitivo. 
+
+\begin{DoxyPostcond}{\-Postcondición}
+define un constructor primitivo que inicializa los datos a valores nulos /$\ast$!\-Correción\-:
+\end{DoxyPostcond}
+\-El vector de códigos lo inicializamos a uno vacío. \-Incializamos la masa a 0.\-0 en vez de a 0 \hypertarget{classdefM_a8256dc221b6f796e1bb6520063c801e6}{\index{def\-M@{def\-M}!def\-M@{def\-M}}
+\index{def\-M@{def\-M}!defM@{def\-M}}
+\subsubsection[{def\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf def\-M\-::def\-M} (
+\begin{DoxyParamCaption}
+\item[{const {\bf def\-M} \&}]{x}
+\end{DoxyParamCaption}
+)}}\label{classdefM_a8256dc221b6f796e1bb6520063c801e6}
+
+
+\-Constructor de copia. 
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em x} & definición a copiar \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Documentación de las funciones miembro}
+\hypertarget{classdefM_a2eba9a6e331f7dd966850378e657e717}{\index{def\-M@{def\-M}!get\-Codes@{get\-Codes}}
+\index{get\-Codes@{get\-Codes}!defM@{def\-M}}
+\subsubsection[{get\-Codes}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ {\bf def\-M\-::get\-Codes} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdefM_a2eba9a6e331f7dd966850378e657e717}
+
+
+\-Consulta el codigo del meteorito. 
+
+\begin{DoxyReturn}{\-Devuelve}
+codigo del meteorito 
+\end{DoxyReturn}
+\hypertarget{classdefM_ac4b0001e8a9dee99def85c2037563161}{\index{def\-M@{def\-M}!get\-Fall@{get\-Fall}}
+\index{get\-Fall@{get\-Fall}!defM@{def\-M}}
+\subsubsection[{get\-Fall}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf def\-M\-::get\-Fall} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdefM_ac4b0001e8a9dee99def85c2037563161}
+
+
+\-Consulta si el meteorito ha caído. 
+
+\begin{DoxyReturn}{\-Devuelve}
+true si el meteorito ha caido (se conoce su posicion), false en caso contrario 
+\end{DoxyReturn}
+\hypertarget{classdefM_a46460f47d0d051fb47cc8a4cc3b1e51d}{\index{def\-M@{def\-M}!get\-Lat@{get\-Lat}}
+\index{get\-Lat@{get\-Lat}!defM@{def\-M}}
+\subsubsection[{get\-Lat}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf def\-M\-::get\-Lat} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdefM_a46460f47d0d051fb47cc8a4cc3b1e51d}
+
+
+\-Consulta la latitud (coordenada) del meteorito. 
+
+\begin{DoxyReturn}{\-Devuelve}
+latitud (coordenada) del meteorito 
+\end{DoxyReturn}
+\hypertarget{classdefM_a35962a1e2c8a28da950d4cdb7575689b}{\index{def\-M@{def\-M}!get\-Long@{get\-Long}}
+\index{get\-Long@{get\-Long}!defM@{def\-M}}
+\subsubsection[{get\-Long}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf def\-M\-::get\-Long} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdefM_a35962a1e2c8a28da950d4cdb7575689b}
+
+
+\-Consulta la longitud (coordenada) del meteorito. 
+
+\begin{DoxyReturn}{\-Devuelve}
+longitud (coordenada) del meteorito 
+\end{DoxyReturn}
+\hypertarget{classdefM_ad289db897bed43977727d3a9cca9a673}{\index{def\-M@{def\-M}!get\-Mas@{get\-Mas}}
+\index{get\-Mas@{get\-Mas}!defM@{def\-M}}
+\subsubsection[{get\-Mas}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf def\-M\-::get\-Mas} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdefM_ad289db897bed43977727d3a9cca9a673}
+
+
+\-Consulta el valor de la masa del meteorito. 
+
+\begin{DoxyReturn}{\-Devuelve}
+masa del meteorito 
+\end{DoxyReturn}
+\hypertarget{classdefM_ae2758bc83256eafcf74a073dde0dbcf9}{\index{def\-M@{def\-M}!get\-Year@{get\-Year}}
+\index{get\-Year@{get\-Year}!defM@{def\-M}}
+\subsubsection[{get\-Year}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf def\-M\-::get\-Year} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdefM_ae2758bc83256eafcf74a073dde0dbcf9}
+
+
+\-Consulta el año en que cayó el meteorito. 
+
+\begin{DoxyReturn}{\-Devuelve}
+año en que cayó 
+\end{DoxyReturn}
+\hypertarget{classdefM_acfda55375efd2a0e41245d20eaa0ec12}{\index{def\-M@{def\-M}!set\-Code@{set\-Code}}
+\index{set\-Code@{set\-Code}!defM@{def\-M}}
+\subsubsection[{set\-Code}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf def\-M\-::set\-Code} (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{classdefM_acfda55375efd2a0e41245d20eaa0ec12}
+
+
+\-Inserta el código del meteorito. 
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em s} & código del meteorito \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Devuelve}
+true si el código era válido y se ha podido guardar, false en caso contrario /$\ast$! \-Corrección\-:
+\end{DoxyReturn}
+\-Consideramos que un código es válido si no era vacío. \-Añadimos también que no esté repetido. \hypertarget{classdefM_aac6d0ed22884bcf80232e0762b1e5a76}{\index{def\-M@{def\-M}!set\-Fall@{set\-Fall}}
+\index{set\-Fall@{set\-Fall}!defM@{def\-M}}
+\subsubsection[{set\-Fall}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf def\-M\-::set\-Fall} (
+\begin{DoxyParamCaption}
+\item[{bool}]{f}
+\end{DoxyParamCaption}
+)}}\label{classdefM_aac6d0ed22884bcf80232e0762b1e5a76}
+
+
+\-Inserta el valor de cuando cayó 
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em f} & valor de si ha caído el meteorito o no \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdefM_ae0816c9e145b0df96f81939b24e093c3}{\index{def\-M@{def\-M}!set\-Lat@{set\-Lat}}
+\index{set\-Lat@{set\-Lat}!defM@{def\-M}}
+\subsubsection[{set\-Lat}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf def\-M\-::set\-Lat} (
+\begin{DoxyParamCaption}
+\item[{double \&}]{l}
+\end{DoxyParamCaption}
+)}}\label{classdefM_ae0816c9e145b0df96f81939b24e093c3}
+
+
+\-Inserta la latitud (coordenada) en la que cayó (coordenada) 
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em l} & latitud \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdefM_a9db03ee4f9e4b53007a1727e9480a52c}{\index{def\-M@{def\-M}!set\-Long@{set\-Long}}
+\index{set\-Long@{set\-Long}!defM@{def\-M}}
+\subsubsection[{set\-Long}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf def\-M\-::set\-Long} (
+\begin{DoxyParamCaption}
+\item[{double \&}]{l}
+\end{DoxyParamCaption}
+)}}\label{classdefM_a9db03ee4f9e4b53007a1727e9480a52c}
+
+\begin{DoxyParams}[1]{\-Parámetros}
+ & {\em \-Inserta} & la longitud (coordenada) en la que cayó (coordenada) \\
+\hline
+\mbox{\tt in}  & {\em l} & longitud \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdefM_ae0aae6cbc83073b714403fd2532f29e7}{\index{def\-M@{def\-M}!set\-Mas@{set\-Mas}}
+\index{set\-Mas@{set\-Mas}!defM@{def\-M}}
+\subsubsection[{set\-Mas}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf def\-M\-::set\-Mas} (
+\begin{DoxyParamCaption}
+\item[{const double \&}]{m}
+\end{DoxyParamCaption}
+)}}\label{classdefM_ae0aae6cbc83073b714403fd2532f29e7}
+
+
+\-Inserta el valor de la masa del meteorito en gramos. 
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em m} & masa del meteorito \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdefM_a1fb9d0be4b62c10d7296851d5393fe34}{\index{def\-M@{def\-M}!set\-Year@{set\-Year}}
+\index{set\-Year@{set\-Year}!defM@{def\-M}}
+\subsubsection[{set\-Year}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf def\-M\-::set\-Year} (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{y}
+\end{DoxyParamCaption}
+)}}\label{classdefM_a1fb9d0be4b62c10d7296851d5393fe34}
+
+
+\-Inserta el año en el que cayó el meteorito. 
+
+
+\begin{DoxyParams}[1]{\-Parámetros}
+\mbox{\tt in}  & {\em y} & año \\
+\hline
+\end{DoxyParams}
+
+
+\-La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+meteorito.\-h\end{DoxyCompactItemize}
